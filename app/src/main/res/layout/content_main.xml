@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.ttran.spelling.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/woodbg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Words Spelled Correctly:"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/holo_orange_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0000"
+        android:id="@+id/countText"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView"
+        android:textColor="@android:color/holo_orange_light" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText1"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:background="@android:drawable/editbox_dropdown_light_frame"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:textColor="@android:color/white"
+        android:inputType="textNoSuggestions|textFilter"
+        />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Spelling"
+        android:id="@+id/checkBtn"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="checkSpelling"
+        android:layout_alignEnd="@+id/editText1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/restartBtn"
+        android:layout_below="@+id/checkBtn"
+        android:layout_alignParentStart="true"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_alignEnd="@+id/textView" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:background="@android:color/holo_green_light"
+        android:layout_below="@+id/restartBtn"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spelled List..."
+        android:id="@+id/spelledWordsBtn"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/checkBtn"
+        android:layout_alignEnd="@+id/checkBtn"
+        android:layout_toEndOf="@+id/countText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Name?"
+        android:id="@+id/nameView"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/editText1"
+        android:textColor="@android:color/holo_green_light" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="00000"
+        android:id="@+id/scoreTV"
+        android:layout_below="@+id/nameView"
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Score: "
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/scoreTV"
+        android:layout_toStartOf="@+id/scoreTV"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Ask someone to say the word"
+        android:id="@+id/askSomeoneTV"
+        android:layout_below="@+id/editText1"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white"
+        android:alpha=".01"
+        android:layout_alignEnd="@+id/editText1" />
+
+</RelativeLayout>

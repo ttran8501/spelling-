@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Spelling+</string>
+    <string name="change_player">Change Player</string>
+    <string name="exit">Exit</string>
+    <string name="service_label">My Spell Checker</string>
+    <string name="title_activity_spelled_word_list">SpelledWordList</string>
+    <string name="title_activity_start">Start</string>
+</resources>
