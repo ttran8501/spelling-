@@ -320,6 +320,7 @@ public class MainActivity extends AppCompatActivity implements SpellCheckerSessi
             mScore += 10;
             scoreView.setText(String.valueOf(mScore));
             myDatabase.execSQL("UPDATE player SET score = " + mScore + " WHERE name = '" + mPlayer + "'");
+            launchReward();
 
         }
         else
@@ -328,5 +329,10 @@ public class MainActivity extends AppCompatActivity implements SpellCheckerSessi
             Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
             soundAlarm();
         }
+    }
+
+    public void launchReward(){
+        Intent intent = new Intent(getApplicationContext(),RewardActivity.class);
+        startActivity(intent);
     }
 }

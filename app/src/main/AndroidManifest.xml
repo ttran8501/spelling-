@@ -36,6 +36,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ttran.spelling.MainActivity" />
         </activity>
+        <activity
+            android:name=".RewardActivity"
+            android:label="@string/title_activity_reward"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ttran.spelling.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
